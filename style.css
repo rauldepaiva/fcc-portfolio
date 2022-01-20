@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+    background: #FAF1D2;
+    font-size: 10px;
+    font-family: Roboto, sans-serif;
+    color: #3B3931;
+}
+
+a {
+    text-decoration: none;
+    color: #3B3931;
+}
+
+#navbar {
+    background-color: #E3D4B3;
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 6.5rem;
+    width: 100%;
+    font-size: 1.7rem;
+    z-index: 2;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+
+#welcome-section {
+    background: #6F75AD;
+    height: 100vh;
+    width: 100%;
+}
+
+#welcome-section > h1 {
+    position: relative;
+    top: 50%;
+    text-align: center;
+    font-family: Abril Fatface, monospace;
+    font-size: 4rem;
+    color: #FAF1D2;
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 50px;
+    width: 100%;
+    max-width: 1150px;
+    margin-top: 5rem;
+}
+
+@media(max-width: 800px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        width: 450px;
+        height: 450px;
+    }
+
+    .project-card {
+        width:450px;
+        height: 450px;
+    }
+}
+
+.image {
+    object-fit: cover;
+    width: 350px;
+    height: 350px;
+}
+
+.project-name {
+    color: white;
+    font-size: 3rem;
+    position: absolute;
+    margin: 150px 0 0 50px;    
+    z-index: 1;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-card {
+    background-color: black;
+    opacity: 0;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+}
+
+.project-tile:hover .project-name {
+    opacity: 1.0;
+}
+
+.project-tile:hover .project-card {
+    opacity: 0.5;    
+    transition: opacity 0.3s ease-in-out;
+}
+
+#about > p {
+    margin: 0 12.5% 3rem 12.5%;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+#contact {
+    background: #E3D4B3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-link {
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+}
